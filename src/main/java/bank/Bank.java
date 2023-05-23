@@ -1,5 +1,6 @@
 package bank;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Bank {
@@ -44,11 +45,13 @@ public class Bank {
         while (true) {
             try {
                 usrChoice = scanner.nextInt();
-                return usrChoice;
-            } catch (Exception e) {
-                System.out.println("Not an Integer" + e.getMessage());
+                break;
+            } catch (InputMismatchException e) {
+                System.out.print("Not an Integer\nPleaser enter Integer: ");
+                scanner.nextLine(); // to eat the line feed that nextInt misses
             }
         }
+        return usrChoice;
     }
 }
 
