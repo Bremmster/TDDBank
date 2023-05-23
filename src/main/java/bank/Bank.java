@@ -26,9 +26,7 @@ public class Bank {
                     System.out.println("Amount to withdraw");
                     usrAccount.withdraw(getUsrInt());
                 }
-                case 3 -> {
-                    System.out.println("Acc: " + usrAccount.getACCOUNT_NUMBER() + " Current Balance " + usrAccount.getBalance());
-                }
+                case 3 -> System.out.println("Acc: " + usrAccount.getACCOUNT_NUMBER() + " Current Balance " + usrAccount.getBalance());
                 case 4 -> System.exit(0);
             }
         }
