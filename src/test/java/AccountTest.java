@@ -1,3 +1,4 @@
+import bank.Account;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,6 +11,19 @@ class AccountTest {
         Account account = new Account(100, "test-account1");
         double expected = 200;
         double input = 100;
+        // Act
+        account.deposit(input);
+        double actual = account.getBalance();
+        // Assert
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void depositZeroTest() {
+        // Arrange
+        Account account = new Account(100, "test-account1");
+        double expected = 100;
+        double input = 0;
         // Act
         account.deposit(input);
         double actual = account.getBalance();

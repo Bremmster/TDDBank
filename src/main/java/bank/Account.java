@@ -1,3 +1,5 @@
+package bank;
+
 public class Account {
 
     private double balance;
@@ -27,5 +29,4 @@ public class Account {
     public String getACCOUNT_NUMBER() {
         return ACCOUNT_NUMBER;
     }
-
 }
