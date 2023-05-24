@@ -6,7 +6,12 @@ public class Account {
     private final String ACCOUNT_NUMBER;
 
     public Account(double balance, String ACCOUNT_NUMBER) {
+        if (balance >= 0) {
         this.balance = balance;
+        } else {
+            this.balance = 0;
+        }
+        // acc nr should be generated, unique and be possible to verify with Luhn algorithm or other algorithm
         this.ACCOUNT_NUMBER = ACCOUNT_NUMBER;
     }
 

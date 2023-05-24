@@ -1,9 +1,22 @@
 import bank.Account;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AccountTest {
+
+
+    @Test
+    void constructorTest() {
+        // Arrange
+        Account account = new Account(-100, "test-account1");
+        double expected = 0;
+
+        // Act
+        double actual = account.getBalance();
+        // Assert
+        assertEquals(expected, actual);
+    }
 
     @Test
     void depositTest() {
@@ -81,5 +94,13 @@ class AccountTest {
         double actual = account.getBalance();
         // Assert
         assertEquals(expected, actual);
+    }
+    @Test
+    void checkAccountNo() {
+        // Arrange
+        String expected = "konto123";
+        Account account = new Account(0, expected);
+        // Act Assert
+        assertEquals(expected, account.getACCOUNT_NUMBER());
     }
 }
