@@ -11,7 +11,7 @@ class AccountTest {
 
     @BeforeEach
     void setUp() {
-    sut = new Account(100, "test-account1");
+        sut = new Account(100, "test-account1");
     }
 
     @AfterEach
@@ -41,6 +41,7 @@ class AccountTest {
         // Assert
         assertEquals(expected, actual);
     }
+
     @Test
     void depositTestTrue() {
         // Arrange
@@ -60,6 +61,7 @@ class AccountTest {
         // Assert
         assertEquals(expected, actual);
     }
+
     @Test
     void depositZeroTestFalse() {
         // Arrange todo
@@ -79,6 +81,7 @@ class AccountTest {
         // Assert
         assertEquals(expected, actual);
     }
+
     @Test
     void illegalDepositTestFalse() {
         // Arrange

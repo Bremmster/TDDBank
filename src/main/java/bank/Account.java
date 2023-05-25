@@ -7,7 +7,7 @@ public class Account {
 
     public Account(double balance, String ACCOUNT_NUMBER) {
         if (balance >= 0) {
-        this.balance = balance;
+            this.balance = balance;
         } else {
             this.balance = 0;
         }
