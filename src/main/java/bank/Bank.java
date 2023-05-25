@@ -16,19 +16,21 @@ public class Bank {
         while (true) {
             printOptions();
             int usrChoice = getUsrInt();
-
+            boolean status = false;
             switch (usrChoice) {
                 case 1 -> {
                     System.out.println("Amount to deposit");
-                    usrAccount.deposit(getUsrInt());
+                    status = usrAccount.deposit(getUsrInt());
                 }
                 case 2 -> {
                     System.out.println("Amount to withdraw");
-                    usrAccount.withdraw(getUsrInt());
+                    status = usrAccount.withdraw(getUsrInt());
                 }
-                case 3 -> System.out.println("Acc: " + usrAccount.getACCOUNT_NUMBER() + " Current Balance " + usrAccount.getBalance());
+                case 3 ->
+                        System.out.println("Acc: " + usrAccount.getACCOUNT_NUMBER() + " Current Balance " + usrAccount.getBalance());
                 case 4 -> System.exit(0);
             }
+            System.out.println(status ? "Done" : "Task failed successfully");
         }
     }
 

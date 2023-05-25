@@ -15,16 +15,20 @@ public class Account {
         this.ACCOUNT_NUMBER = ACCOUNT_NUMBER;
     }
 
-    public void deposit(double cash) {
+    public boolean deposit(double cash) {
         if (cash > 0) {
             this.balance += cash;
+            return true;
         }
+        return false;
     }
 
-    public void withdraw(double cash) {
+    public boolean withdraw(double cash) {
         if (0 < cash && cash <= balance) {
             balance -= cash;
+            return true;
         }
+        return false;
     }
 
     public double getBalance() {
