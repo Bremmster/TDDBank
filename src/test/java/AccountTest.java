@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * Unit tests for the {@link Account} class.
  */
@@ -20,6 +21,7 @@ class AccountTest {
     void takeDown() {
         sut = null;
     }
+
     /**
      * Tests the constructor of the {@link Account} class.
      * It verifies that the balance is set to 0 when a negative initial balance is provided.
@@ -34,6 +36,7 @@ class AccountTest {
         // Assert
         assertEquals(expected, actual);
     }
+
     /**
      * Tests the {@link Account#deposit(double)} method of the {@link Account} class.
      * It verifies that the balance is correctly updated after a deposit.
@@ -49,6 +52,7 @@ class AccountTest {
         // Assert
         assertEquals(expected, actual);
     }
+
     /**
      * Tests the {@link Account#deposit(double)} method of the {@link Account} class.
      * It verifies that the deposit operation returns true when the deposit is successful.
@@ -60,6 +64,7 @@ class AccountTest {
         // Act & Assert
         assertTrue(sut.deposit(input));
     }
+
     /**
      * Tests the {@link Account#deposit(double)} method of the {@link Account} class.
      * It verifies that the balance remains unchanged when depositing zero amount.
@@ -75,6 +80,7 @@ class AccountTest {
         // Assert
         assertEquals(expected, actual);
     }
+
     /**
      * Tests the {@link Account#deposit(double)} method of the {@link Account} class.
      * It verifies that the deposit operation returns false when attempting to deposit zero amount.
@@ -86,6 +92,7 @@ class AccountTest {
         // Act & Assert
         assertFalse(sut.deposit(input));
     }
+
     /**
      * Tests the {@link Account#deposit(double)} method of the {@link Account} class.
      * It verifies that the balance remains unchanged when attempting to deposit a negative amount.
@@ -101,6 +108,7 @@ class AccountTest {
         // Assert
         assertEquals(expected, actual);
     }
+
     /**
      * Tests the {@link Account#deposit(double)} method of the {@link Account} class.
      * It verifies that the deposit operation returns false when attempting to deposit a negative amount.
@@ -112,6 +120,7 @@ class AccountTest {
         // Act & Assert
         assertFalse(sut.deposit(input));
     }
+
     /**
      * Tests the {@link Account#withdraw(double)} method of the {@link Account} class.
      * It verifies that the balance is correctly updated after a withdrawal.
@@ -127,6 +136,7 @@ class AccountTest {
         // Assert
         assertEquals(expected, actual);
     }
+
     /**
      * Tests the {@link Account#withdraw(double)} method of the {@link Account} class.
      * It verifies that the withdrawal operation returns true when the withdrawal is successful.
@@ -138,6 +148,7 @@ class AccountTest {
         // Act & Assert
         assertTrue(sut.withdraw(input));
     }
+
     /**
      * Tests the {@link Account#withdraw(double)} method of the {@link Account} class.
      * It verifies that the balance remains unchanged when attempting to withdraw an amount larger than the balance.
@@ -153,6 +164,7 @@ class AccountTest {
         // Assert
         assertEquals(expected, actual);
     }
+
     /**
      * Tests the {@link Account#withdraw(double)} method of the {@link Account} class.
      * It verifies that the withdrawal operation returns false when attempting to withdraw an amount larger than the balance.
@@ -164,6 +176,7 @@ class AccountTest {
         // Act & Assert
         assertFalse(sut.withdraw(input));
     }
+
     /**
      * Tests the {@link Account#withdraw(double)} method of the {@link Account} class.
      * It verifies that the balance remains unchanged when attempting to withdraw a negative amount.
@@ -180,6 +193,7 @@ class AccountTest {
         assertEquals(expected, actual);
 
     }
+
     /**
      * Tests the {@link Account#withdraw(double)} method of the {@link Account} class.
      * It verifies that the withdrawal operation returns false when attempting to withdraw a negative amount.
@@ -191,6 +205,7 @@ class AccountTest {
         // Act & Assert
         assertFalse(sut.withdraw(input));
     }
+
     /**
      * Tests the {@link Account#getACCOUNT_NUMBER()} method of the {@link Account} class.
      * It verifies that the account number is correctly retrieved.

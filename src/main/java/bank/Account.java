@@ -1,4 +1,5 @@
 package bank;
+
 /**
  * Represents a bank account.
  */
@@ -6,6 +7,7 @@ public class Account {
 
     private double balance;
     private final String ACCOUNT_NUMBER;
+
     /**
      * Constructs an Account object with the specified initial balance and account number.
      *
@@ -21,6 +23,7 @@ public class Account {
         // acc nr should be generated, unique and be possible to verify with Luhn algorithm or other algorithm
         this.ACCOUNT_NUMBER = ACCOUNT_NUMBER;
     }
+
     /**
      * Deposits the specified amount of cash into the account.
      *
@@ -34,6 +37,7 @@ public class Account {
         }
         return false;
     }
+
     /**
      * Withdraws the specified amount of cash from the account.
      *
@@ -47,6 +51,7 @@ public class Account {
         }
         return false;
     }
+
     /**
      * Retrieves the current balance of the account.
      *
@@ -55,6 +60,7 @@ public class Account {
     public double getBalance() {
         return balance;
     }
+
     /**
      * Retrieves the account number.
      *
