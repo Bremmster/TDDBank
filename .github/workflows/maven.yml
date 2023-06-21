@@ -31,6 +31,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: run the tests
       run: mvn clean test
+    - working-directory: TDDBank\src\test
     - name: tests run
       run: echo "yay"
 
