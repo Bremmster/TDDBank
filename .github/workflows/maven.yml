@@ -29,6 +29,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: run the tests
+      run: mvn clean test
+    - name: tests run
+      run: echo "yay"
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
  #   - name: Update dependency graph
